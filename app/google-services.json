@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "375406378896",
+    "firebase_url": "https://notelist-a76e8.firebaseio.com",
+    "project_id": "notelist-a76e8",
+    "storage_bucket": "notelist-a76e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375406378896:android:57def7e46bb77b8ee07d15",
+        "android_client_info": {
+          "package_name": "com.xela.notelist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375406378896-ffj3a36armhupsbovrgkrg4h085srlvh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xela.notelist",
+            "certificate_hash": "9f82ccb084a57ee2a4022404eed1033b254341a3"
+          }
+        },
+        {
+          "client_id": "375406378896-am0cf4c8sq4olv0dqri2k05jjqvq69hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPLofbiInqk44fJJD85-hIcC8oU3JAH6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375406378896-am0cf4c8sq4olv0dqri2k05jjqvq69hp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
