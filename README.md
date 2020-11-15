@@ -1,2 +1,0 @@
-# NoteList
-Android - Firebase

@@ -1,27 +1,41 @@
 package com.xela.notelist.model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
+
+//Entity annotation to specify the table's name
+@Entity(tableName = "notes")
 public class Note {
+//PrimaryKey annotation to declare primary key with auto increment value
+//ColumnInfo annotation to specify the column's name
+    @PrimaryKey(autoGenerate = true)
+    public int id;
 
-    private String id,note_name;
+    @ColumnInfo(name = "title")
+    public String title;
 
-    public Note(String id, String note_name) {
-        this.id = id;
-        this.note_name = note_name;
+
+    public Note(String title) {
+        this.title = title;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public String getNote_name() {
-        return note_name;
-    }
-
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public void setNote_name(String note_name) {
-        this.note_name = note_name;
+    public String getTitle() {
+        return title;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+//@ColumnInfo(name = "body") var body: String = "")
 }
