@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/note_btn"
+        <RelativeLayout
+            android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="contoh"/>
+            android:background="@color/red">
+
+                <TextView
+                    android:id="@+id/delete_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Delete"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/foreground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/note_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="asd"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="8"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_custom"/>
+
+        </RelativeLayout>
 
 
-</LinearLayout>
+
+
+</FrameLayout>

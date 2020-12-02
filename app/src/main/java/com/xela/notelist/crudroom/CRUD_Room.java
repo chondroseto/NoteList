@@ -24,4 +24,7 @@ public interface CRUD_Room {
     @Delete
     void delete(Note notes);
 
+    @Query("DELETE FROM notes")
+    void deleteall();
+
 }

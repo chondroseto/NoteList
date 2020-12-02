@@ -6,4 +6,5 @@
     <color name="Green">#00FF19</color>
     <color name="Transparant">#00FFFFFF</color>
     <color name="lightDark">#4E4E4E</color>
+    <color name="red">#FF0000</color>
 </resources>

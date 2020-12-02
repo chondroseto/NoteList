@@ -4,8 +4,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.io.Serializable;
-
 //Entity annotation to specify the table's name
 @Entity(tableName = "notes")
 public class Note {
@@ -17,10 +15,23 @@ public class Note {
     @ColumnInfo(name = "title")
     public String title;
 
+    public Note(){
 
-    public Note(String title) {
+    }
+
+    public Note(Integer id){
+        this.id = id;
+    }
+
+    public Note(String title){
         this.title = title;
     }
+
+    public Note(Integer id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
 
     public int getId() {
         return id;

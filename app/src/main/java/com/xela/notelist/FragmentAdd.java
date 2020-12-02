@@ -35,6 +35,8 @@ public class FragmentAdd extends Fragment {
     ImageButton add_btn;
     List<Note> noteList;
 
+    int i;
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -86,18 +88,16 @@ public class FragmentAdd extends Fragment {
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (et.getText().length()>0){
-                    insertNote();
-                    Toast.makeText(getContext().getApplicationContext(),"Save Success",Toast.LENGTH_LONG);
-                }else{
+                if (et.getText().toString().isEmpty()){
                     Toast.makeText(getContext().getApplicationContext(),"Please Fill Text",Toast.LENGTH_LONG);
+                }else{
+                    insertNote();
+                    et.setText("");
+                    Toast.makeText(getContext().getApplicationContext(),"Save Success",Toast.LENGTH_LONG);
                 }
 
             }
         });
-
-        //
-
 
         return view;
     }
@@ -107,7 +107,7 @@ public class FragmentAdd extends Fragment {
 
             @Override
             protected List<Note> doInBackground(Void... voids) {
-
+                //i = i+1;
                 Room_db appDB = Room_db.getInstance(getContext().getApplicationContext());
                 Note notes = new Note(et.getText().toString());
                 appDB.noteDao().insert(notes);
@@ -117,7 +117,7 @@ public class FragmentAdd extends Fragment {
 
             @Override
             protected void onPostExecute(List<Note> notes) {
-                super.onPostExecute(notes);
+                //super.onPostExecute(notes);
                 main.getNote();
             }
         }
